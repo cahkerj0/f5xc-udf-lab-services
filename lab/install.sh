@@ -15,10 +15,11 @@ sleep 2
 apt-get install -y python3-venv
 python3 -m venv /usr/local/lib/custom/.venv &&source /usr/local/lib/custom/.venv/bin/activate &&pip3 install -r /usr/local/lib/custom/requirements.txt
 sleep 2
-python3 -m venv /usr/local/lib/custom/.venv --system-site-packages
-source /usr/local/lib/custom/.venv/bin/activate
 pip3 install retry
 sleep 2
 mv f5xc-eph-account.service /etc/systemd/system/
 useradd -r -s /bin/false f5xc-service
+sleep 5
+python3 -m venv /usr/local/lib/custom/.venv --system-site-packages
+source /usr/local/lib/custom/.venv/bin/activate
 systemctl daemon-reload &&systemctl start f5xc-eph-account.service &&systemctl enable f5xc-eph-account.service
