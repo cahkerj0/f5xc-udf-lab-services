@@ -11,6 +11,8 @@ mv requirements.txt /usr/local/lib/custom/ &&mv aws-cred.py /usr/local/lib/custo
 
 sleep 2
 chown ubuntu:ubuntu /usr/local/lib/custom/requirements.txt
+sleep 2
+apt-get install -y python3-venv
 python3 -m venv /usr/local/lib/custom/.venv &&source /usr/local/lib/custom/.venv/bin/activate &&pip3 install -r /usr/local/lib/custom/requirements.txt
 
 sleep 2
