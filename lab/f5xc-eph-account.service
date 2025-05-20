@@ -1,0 +1,17 @@
+[Unit]
+Description=F5XC Ephemeral Account Service
+StartLimitBurst=3
+StartLimitIntervalSec=60
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/lib/custom/.venv/bin/python /usr/local/lib/custom/f5xc-eph-account.py
+ExecStop=/usr/local/lib/custom/.venv/bin/python /usr/local/lib/custom/f5xc-eph-account.py --kill
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=5
+Type=notify
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
