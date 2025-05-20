@@ -1,5 +1,8 @@
 #!/bin/bash
 
+chmod +x tops_lab_install.sh &&chmod +x install.sh
+
+sleep 2
 ./tops_lab_install.sh 
 sleep 2
 
