@@ -4,7 +4,7 @@
 sleep 2
 
 mkdir /usr/local/lib/custom
-mv requirements.txt /usr/local/lib/custom &&mv aws-cred.py /usr/local/lib/custom
+mv requirements.txt /usr/local/lib/custom/ &&mv aws-cred.py /usr/local/lib/custom/ &&f5xc-eph-account.py usr/local/lib/custom/
 
 sleep 2
 chown ubuntu:ubuntu /usr/local/lib/custom/requirements.txt
