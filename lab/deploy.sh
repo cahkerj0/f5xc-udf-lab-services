@@ -30,7 +30,6 @@ python3 -m venv /usr/local/lib/custom/.venv
 
 # Activate venv and install Python dependencies
 source /usr/local/lib/custom/.venv/bin/activate
-pip install --upgrade pip  # Recommended
 pip install -r /usr/local/lib/custom/requirements.txt
 pip install retry  # Manual install if not in requirements.txt
 
