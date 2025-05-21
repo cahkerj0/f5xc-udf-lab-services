@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e  # Exit immediately on error
+#set -e  # Exit immediately on error
 
 echo "➤ Step 1: Make install scripts executable"
 chmod +x tops_lab_install.sh install.sh
